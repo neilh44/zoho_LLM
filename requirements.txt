@@ -1,5 +1,5 @@
 flask
-request
+requests
 flask-cors
 python-dotenv
 Groq
