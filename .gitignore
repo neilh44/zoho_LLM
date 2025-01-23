@@ -1,0 +1,68 @@
+# Ignore operating system files
+.DS_Store
+Thumbs.db
+
+# Ignore log files
+*.log
+
+# Ignore Python files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.sqlite3
+
+# Ignore virtual environments
+venv/
+env/
+
+# Ignore package manager files
+node_modules/
+package-lock.json
+yarn.lock
+
+# Ignore compiled files
+*.out
+*.o
+*.class
+*.so
+
+# Ignore environment variable files
+.env
+*.env.*
+
+# Ignore IDE/project-specific files
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Ignore archives
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Ignore macOS files
+._*
+
+# Ignore test coverage files
+.coverage
+coverage/
+coverage-report/
+*.lcov
+
+# Ignore data files
+*.csv
+*.db
+*.sql
+*.xlsx
+
+# Ignore images and generated assets
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.webp
+*.tiff

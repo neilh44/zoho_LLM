@@ -1,0 +1,32 @@
+daily routine
+1. export groq_api_key
+2. generate referesh token
+
+method to generate refresh token
+- go to api.console.zoho.in
+- select self client
+- select ZohoCRM.coql.READ","ZohoCRM.modules.ALL","ZohoCRM.settings.ALL as a scope
+- click create
+- download json file containing client, client secret and code.
+- Next, visit postman app
+- add client_id, client_secret & code to the values. select grant_type as authorization_code
+- send post request as below
+https://accounts.zoho.in/oauth/v2/token?grant_type=authorization_code&client_id=1000.OADXPQO0SDC4R4YBLOQ0XB1H2UMAVE&client_secret=c8d64d1c8926951cee2444729a1b55e9a40492c97f&code=1000.6ab0519382b0803e4460a7bbfde267b2.b638e5cf93c1954d6224ac204bc6a5bf
+- select send button
+- you will get refresh and acccess token as below
+{
+    "access_token": "1000.56449fead0e29c7ddedabc27ad8a7315.b12f88231c1002f232e50fb389beaa4e",
+    "refresh_token": "1000.0adbfa72e9c001a172d6fa5a3116e9a3.42dfad3af49661566127fa46806e4dec",
+    "scope": "ZohoCRM.coql.READ ZohoCRM.modules.ALL ZohoCRM.settings.ALL",
+    "api_domain": "https://www.zohoapis.in",
+    "token_type": "Bearer",
+    "expires_in": 3600
+}
+- copy refresh token and place the in the zoho_COQL_executor module.
+as below
+
+        # Hardcoded credentials      
+          CREDENTIALS = {
+            "client_id": "1000.OADXPQO0SDC4R4YBLOQ0XB1H2UMAVE",
+            "client_secret": "c8d64d1c8926951cee2444729a1b55e9a40492c97f",
+            "refresh_token": "1000.0adbfa72e9c001a172d6fa5a3116e9a3.42dfad3af49661566127fa46806e4dec" 
