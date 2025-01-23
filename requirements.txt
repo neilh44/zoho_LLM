@@ -1,0 +1,7 @@
+flask
+request
+flask-cors
+python-dotenv
+Groq
+zohocrmsdk7_0
+gunicorn

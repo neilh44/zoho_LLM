@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: zoho-query-service
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    plan: starter
+    envVars:
+      - key: FLASK_DEBUG
+        value: false
+      - key: PORT
+        value: 5000
+      - key: ZOHO_CLIENT_ID
+        sync: false
+      - key: ZOHO_CLIENT_SECRET
+        sync: false
+      - key: ZOHO_REFRESH_TOKEN
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+    healthCheckPath: /health
+    autoDeploy: true
